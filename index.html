@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
+
+</head>
+<body>
+<h1></h1>
+<div id="main" style="padding: 200px 300px" ng-view>
+</div>
+
+<script>
+  (function () {
+    var lang = "zh";
+    reserveLoad(
+         ['./public/dist/js/angular-all.min.js','angular'],
+         ['./public/dist/js/ie.min.js'],
+         ['./public/dist/js/jsEasy.min.js','jsEasy'], function (errorUrl) {
+           angular.bootstrap(document, ['jsEasy']);
+         });
+  })();
+</script>
+</body>
+</html>
+
