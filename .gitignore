@@ -34,3 +34,5 @@ public/node_modules
 
 public/dist/*
 
+*.idea/
+

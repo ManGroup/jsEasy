@@ -179,7 +179,7 @@ module.exports = function(grunt) {
           urlCwd: 'dist/'
         },
         dest: 'dist/index.html',
-        src: 'src/index_src.html'
+        src: '../index.html'
       }
     }
 
@@ -195,5 +195,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-recess');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'copy']);
+  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'copy', 'hash']);
 };

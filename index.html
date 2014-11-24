@@ -4,21 +4,68 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-hover.css" />
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-base.css" />
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-desktop.css" />
+
   <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
 
 </head>
-<body>
-<h1></h1>
-<div id="main" style="padding: 200px 300px" ng-view>
+<body ng-app>
+
+<div class="app">
+
+  <div class="navbar navbar-app navbar-absolute-top">
+    <div class="navbar-brand navbar-brand-center" yield-to="title">
+      宅语菜园
+    </div>
+    <div class="btn-group pull-left">
+      <div ui-toggle="sidebarLeft" class="btn sidebar-toggle">
+        <i class="fa fa-bars"></i>菜单
+      </div>
+    </div>
+    <div class="btn-group pull-right" yield-to="navbarAction">
+      <a href="#/forms" class="btn btn-navbar">
+        <i class="fa fa-exclamation-circle fa-navbar"></i>登陆
+      </a>
+    </div>
+  </div>
+
+  <div class="navbar navbar-app navbar-absolute-bottom">
+    <div class="btn-group justified">
+      <a href="#/" class="btn btn-navbar">
+        <i class="fa fa-home fa-navbar"></i>推荐
+      </a>
+      <a href="#/" class="btn btn-navbar">
+        <i class="fa fa-home fa-navbar"></i>菜单
+      </a>
+      <a href="#/" class="btn btn-navbar">
+        <i class="fa fa-home fa-navbar"></i>购物车
+      </a>
+      <a href="#/forms" class="btn btn-navbar">
+        <i class="fa fa-exclamation-circle fa-navbar"></i>设置
+      </a>
+    </div>
+  </div>
+
+
+  <div class="app-body" ng-class="{loading: loading}">
+    <div ng-show="loading" class="app-content-loading">
+      <i class="fa fa-spinner fa-spin loading-spinner"></i>
+    </div>
+    <div class="app-content">
+      <ng-view></ng-view>
+    </div>
+  </div>
 </div>
 
 <script>
   (function () {
     var lang = "zh";
     reserveLoad(
-         ['./public/dist/js/angular-all.min.js','angular'],
-         ['./public/dist/js/ie.min.js'],
-         ['./public/dist/js/jsEasy.min.js','jsEasy'], function (errorUrl) {
+         ['./public/dist/js/angular-all.min.js', 'angular'], ['./public/dist/js/ie.min.js'], [
+      './public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
            angular.bootstrap(document, ['jsEasy']);
          });
   })();
