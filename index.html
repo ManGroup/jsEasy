@@ -41,7 +41,7 @@
         <i class="fa fa-home fa-navbar"></i>订单
       </a>
 
-      <a href="/profile" class="btn btn-navbar">
+      <a href="#/forms" class="btn btn-navbar">
         <i class="fa fa-exclamation-circle fa-navbar"></i>我的信息
       </a>
     </div>
@@ -62,10 +62,8 @@
   (function () {
     var lang = "zh";
     reserveLoad(
-         ['./public/dist/js/angular-all.min.js', 'angular'],
-         ['./public/src/libs/dist/js/mobile-angular-ui.js'],
-         ['./public/dist/js/ie.min.js'],
-         ['./public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
+         ['./public/dist/js/angular-all.min.js', 'angular'], ['./public/dist/js/ie.min.js'], [
+      './public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
            angular.bootstrap(document, ['jsEasy']);
          });
   })();
