@@ -11,6 +11,8 @@ jsEasyControllers.controller('loginCtrl', ['app','$scope', '$routeParams', 'logi
   }
   tools.testTool();
 
+  $scope.telephone = '';
+  $scope.password = '';
 
   $scope.login = function () {
     loginService.login(function(err,result){
