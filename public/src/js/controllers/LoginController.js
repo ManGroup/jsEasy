@@ -14,7 +14,7 @@ jsEasyControllers.controller('loginCtrl', ['app','$scope', '$routeParams', 'logi
 
   $scope.login = function () {
     loginService.login(function(err,result){
-      if (result.data.username == $scope.data.username && result.data.password == $scope.data.password) {
+      if (result.data.username == $scope.telephone && result.data.password == $scope.password) {
         app.location.search({}).path('/home');
       } else {
         alert($locale.LOGIN.error);
@@ -22,14 +22,12 @@ jsEasyControllers.controller('loginCtrl', ['app','$scope', '$routeParams', 'logi
     });
   };
 
-  $scope.reset = function () {
-    if($scope.data) {
-      if ($scope.data.username) {
-        $scope.data.username = '';
+  $scope.register = function () {
+      if ($scope.telephone) {
+        $scope.telephone = '';
       }
-      if ($scope.data.password) {
-        $scope.data.password = '';
+      if ($scope.password) {
+        $scope.password = '';
       }
-    }
   };
 }]);
