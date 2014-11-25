@@ -121,6 +121,18 @@ module.exports = function(grunt) {
 //        ]
 //      }
 //    },
+    less: {
+      development: {
+        options: {
+          paths: ["src/theme/css"],
+          cleancss: true
+        },
+        files: {
+          "src/theme/css/style.css": "src/theme/css/style.less"
+        }
+      }
+    },
+
 
     htmlmin: {
       dist: {
@@ -139,6 +151,12 @@ module.exports = function(grunt) {
         flatten: true,
         dest: 'dist/fonts/',
         src: ['src/vendor/font-awesome/fonts/*']
+      },
+      theme : {
+        expand: true,
+        flatten: true,
+        dest: 'dist/css/',
+        src: ['src/theme/css/*.css']
       },
       css: {
         expand: true,
@@ -189,11 +207,12 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-hash-url');
   grunt.loadNpmTasks('grunt-recess');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'copy', 'hash']);
+  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'less', 'copy', 'hash']);
 };

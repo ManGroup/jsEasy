@@ -30,6 +30,8 @@ node_modules
 
 public/src/vendor/*
 
+public/src/theme/css/*.css
+
 public/node_modules
 
 public/dist/*
