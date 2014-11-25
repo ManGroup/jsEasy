@@ -46,7 +46,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
    $routeProvider.
      when('/index', index).
      when('/login', login).
-     when('/home', home).
+     when('/home', index).
      when('/profile', profile).
      when('/', index).
      otherwise({
