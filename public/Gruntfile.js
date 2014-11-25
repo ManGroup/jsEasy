@@ -214,5 +214,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-recess');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'less', 'copy', 'hash']);
+  grunt.registerTask('default', ['clean', 'uglify' , 'less', 'copy', 'hash']);
 };

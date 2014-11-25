@@ -18,7 +18,7 @@
   <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
 
 </head>
-<body ng-controller="homeCtrl">
+<body ng-app="jsEasy" ng-controller="MainController">
 
 <!-- Sidebars -->
 <div ng-include="'public/dist/tpl/sidebar.html'"
@@ -77,10 +77,12 @@
     var lang = "zh";
     reserveLoad(
          ['./public/dist/js/angular-all.min.js', 'angular'],
+            ['./public/src/libs/dist/js/angular-touch.js'],
+
          ['./public/src/libs/dist/js/mobile-angular-ui.js'],
          ['./public/dist/js/ie.min.js'],
          ['./public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
-           angular.bootstrap(document, ['jsEasy']);
+//           angular.bootstrap(document, ['jsEasy']);
          });
   })();
 </script>
