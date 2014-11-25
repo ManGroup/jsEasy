@@ -37,10 +37,17 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
      controller: 'homeCtrl'
    };
 
+   var profile = {
+     templateUrl: getFileProvider.html('profile.html'),
+     controller: 'homeCtrl'
+   };
+
+
    $routeProvider.
      when('/index', index).
      when('/login', login).
      when('/home', home).
+     when('/profile', profile).
      when('/', index).
      otherwise({
        redirectTo: '/'

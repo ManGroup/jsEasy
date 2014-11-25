@@ -1,6 +1,6 @@
 
 
-var jsEasyApp = angular.module('jsEasy', ['jsEasy.router', 'jsEasy.services', 'jsEasy.locale', 'jsEasy.controllers']);
+var jsEasyApp = angular.module('jsEasy', ['jsEasy.router', 'jsEasy.services', 'jsEasy.locale', 'jsEasy.controllers','mobile-angular-ui']);
 
 jsEasyApp.config(['$httpProvider', 'app', function ($httpProvider, app) {
 

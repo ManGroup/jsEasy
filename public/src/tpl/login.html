@@ -1,15 +1,43 @@
 
-<h3>{{helloworld}}</h3>
-<h3>{{text}}</h3>
-<form>
-  {{username}} : <br>
-  <input type="text" value="" ng-model="data.username"> <br>
-  {{password}} : <br>
-  <input type="text" value="" ng-model="data.password"> <br>
+<div content-for="title">
+  <span>登录</span>
+</div>
 
-  <button ng-click="login()">{{loginBtn}}</button>
-  <button ng-click="reset()">{{resetBtn}}</button>
+<div class="scrollable">
+  <div class="scrollable-content section">
 
-  <a href="/">{{backBtn}}</a>
+    <form role="form" ng-submit='login()'>
+      <fieldset>
+        <legend></legend>
+        <div class="form-group has-success has-feedback">
+          <label>手机号</label>
+          <input type="text"
+                 ng-model="telephone"
+                 class="form-control"
+                 placeholder="请输入手机号">
+        </div>
 
-</form>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password"
+                 class="form-control"
+                 placeholder="请输入密码">
+        </div>
+      </fieldset>
+      <hr>
+
+      <button class="btn btn-primary btn-block">
+        新用户注册
+      </button>
+      <button class="btn btn-primary btn-block">
+        已有帐号登录
+      </button>
+
+      <!--<div content-for="navbarAction">-->
+      <!--<a class='btn' ng-click='login()'>注册</a>-->
+      <!--</div>-->
+
+    </form>
+  </div>
+</div>
+
