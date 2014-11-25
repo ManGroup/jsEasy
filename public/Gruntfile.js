@@ -71,7 +71,8 @@ module.exports = function(grunt) {
           'src/vendor/angular-animate/angular-animate.js',
           'src/vendor/angular-cookies/angular-cookies.js',
           'src/vendor/angular-resource/angular-resource.js',
-          'src/vendor/angular-route/angular-route.js'
+          'src/vendor/angular-route/angular-route.js',
+          'src/vendor/angular-route/angular-touch.js'
         ]
       },
 //      lib: {
@@ -214,5 +215,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-recess');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'clean', 'uglify' , 'less', 'copy', 'hash']);
+  grunt.registerTask('default', ['clean', 'uglify' , 'less', 'copy', 'hash']);
 };
