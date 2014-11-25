@@ -22,6 +22,10 @@ jsEasyControllers.controller('loginCtrl', ['app','$scope', '$routeParams', 'logi
     });
   };
 
+  $scope.submit = function () {
+    return false;
+  };
+
   $scope.register = function () {
       if ($scope.telephone) {
         $scope.telephone = '';

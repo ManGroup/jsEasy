@@ -4,7 +4,7 @@
 
 jsEasyControllers.controller("homeCtrl", ["$rootScope", "$scope", "$routeParams", "$locale",
                                           function ($rootScope, $scope, $routeParams, $locale) {
-  $scope.message = $locale.HOME.message;
+  $scope.message = "登录成功！！！";
   $scope.title = "我的";
 
   $rootScope.$on('$routeChangeStart', function () {
