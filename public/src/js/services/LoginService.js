@@ -4,8 +4,8 @@
 
 jsEasyServices.factory('loginService', ['restAPI', function (restAPI) {
   return {
-    login: function (callback) {
-      restAPI.login.get({}, function (data) {
+    foodlist: function (callback) {
+      restAPI.foodlist.get({}, function (data) {
         console.log(data);
         callback(data.error, data);
       });

@@ -7,6 +7,7 @@ var jsEasyServices = angular.module('jsEasy.services', ['ngResource']);
 jsEasyServices.factory('restAPI', ['$resource', function ($resource) {
   return {
     defaultJson : $resource('/api/defaultJson.json'),
-    login: $resource('/api/login.json')
+    login: $resource('/api/login.json'),
+    foodlist: $resource('/api/foodlist.json')
   };
 }]);
