@@ -44,7 +44,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
 
    var detail = {
      templateUrl: getFileProvider.html('detail.html'),
-     reloadOnSearch: false
+     controller: 'detailCtrl'
    };
 
    $routeProvider.
