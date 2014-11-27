@@ -235,3 +235,5 @@ jsEasyApp.controller('loginCtrl', ['app','$scope', '$routeParams', 'loginService
         }
     };
 }]);
+
+

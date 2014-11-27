@@ -94,14 +94,14 @@ module.exports = function(grunt) {
       jsEasy: {
         dest: 'dist/js/<%= pkg.name %>.min.js',
         src: [
-          'src/js/location/locale_zh.js',
-          'src/js/utils/tools.js',
-          'src/js/controllers/*',
-          'src/js/services/*',
+          'src/js/app.js',
           'src/js/router.js',
           'src/js/filters.js',
           'src/js/directives.js',
-          'src/js/app.js'
+          'src/js/location/locale_zh.js',
+          'src/js/utils/tools.js',
+          'src/js/controllers/*',
+          'src/js/services/*'
         ]
       }
     },
