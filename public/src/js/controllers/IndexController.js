@@ -3,7 +3,7 @@
  */
 
 jsEasyControllers.controller("indexCtrl", ["$scope", "$locale", function ($scope, $locale) {
-  $scope.hello = $locale.COMMON.hello;
-  $scope.login = $locale.COMMON.login;
   console.log("this is index ctrl")
+  $scope.message = "你好";
+
 }]);

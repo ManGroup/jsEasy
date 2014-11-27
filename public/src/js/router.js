@@ -24,7 +24,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
 
    var index = {
      templateUrl: getFileProvider.html('index.html'),
-       reloadOnSearch: false
+     controller: 'indexCtrl'
    };
 
    var login = {
