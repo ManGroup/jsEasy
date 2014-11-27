@@ -6,11 +6,8 @@ var jsEasyApp = angular.module('jsEasy', ['jsEasy.tools','jsEasy.router', 'jsEas
     'mobile-angular-ui']);
 
 jsEasyApp.config(['$httpProvider', 'app', function ($httpProvider, app) {
-
     'use strict';
-
-  }]);
-
+}]);
 
 //
 // `$drag` example: drag to dismiss
