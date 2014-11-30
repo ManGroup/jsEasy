@@ -8,7 +8,7 @@ jsEasyServices.factory('restAPI', ['$resource', function ($resource) {
   return {
     defaultJson: $resource('/api/defaultJson.json'),
     login: $resource('/api/login.json'),
-    foodlist: $resource('/api/foodlist.json'),
+    foodlist: $resource('/api/food/list.json'),
     getDetail: $resource('/api/food/get.json')
   };
 }]);
