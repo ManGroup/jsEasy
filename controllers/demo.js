@@ -56,12 +56,13 @@ exports.getFoodList = function (req, res) {
 }
 exports.getFood = function (req, res) {
 
+    console.log(req.query)
     res.json({
             "error": "",
             "data": {
                 "id" :  "1",
                 "name" : "口水鸡",
-                "price" : "Y2111",
+                "price" : "25",
                 "fileId" : "/public/images/detail01.jpg",
                 "description" : "XXXXX"
             }
