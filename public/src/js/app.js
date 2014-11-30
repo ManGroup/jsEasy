@@ -180,9 +180,6 @@ jsEasyApp.controller('MainController', ["$rootScope", "$scope" , 'app', '$locati
     $rootScope.loading = true;
   });
 
-  foodService.foodlist(function (err, result) {
-    $scope.foodlist = result.data;
-  });
 
   $rootScope.$on('$routeChangeSuccess', function () {
     $rootScope.loading = false;

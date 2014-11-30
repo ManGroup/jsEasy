@@ -26,44 +26,44 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
       templateUrl: getFileProvider.html('index.html'),
       reloadOnSearch: false
     };
-   var index = {
-     templateUrl: getFileProvider.html('index.html'),
-       reloadOnSearch: false
-   };
+    var index = {
+      templateUrl: getFileProvider.html('index.html'),
+      reloadOnSearch: false
+    };
 
     var login = {
       templateUrl: getFileProvider.html('login.html'),
       controller: 'loginCtrl'
     };
-   var login = {
-     templateUrl: getFileProvider.html('login.html'),
-       reloadOnSearch: false
-   };
+    var login = {
+      templateUrl: getFileProvider.html('login.html'),
+      reloadOnSearch: false
+    };
 
-   var home = {
-     templateUrl: getFileProvider.html('home.html'),
-     reloadOnSearch: false
-   };
+    var home = {
+      templateUrl: getFileProvider.html('home.html'),
+      reloadOnSearch: false
+    };
 
-   var profile = {
-     templateUrl: getFileProvider.html('profile.html'),
-     reloadOnSearch: false
-   };
+    var profile = {
+      templateUrl: getFileProvider.html('profile.html'),
+      reloadOnSearch: false
+    };
 
-   var detail = {
-     templateUrl: getFileProvider.html('detail.html'),
-     reloadOnSearch: false
-   };
+    var detail = {
+      templateUrl: getFileProvider.html('detail.html'),
+      reloadOnSearch: false
+    };
 
-   $routeProvider.
-     when('/index', index).
-     when('/login', login).
-     when('/home', index).
-     when('/profile', profile).
-     when('/detail', detail).
-     when('/', index).
-     otherwise({
-       redirectTo: '/'
-     });
-   $locationProvider.html5Mode(true).hashPrefix('!');
-}]);
+    $routeProvider.
+      when('/index', index).
+      when('/login', login).
+      when('/home', index).
+      when('/profile', profile).
+      when('/detail', detail).
+      when('/', index).
+      otherwise({
+        redirectTo: '/'
+      });
+    $locationProvider.html5Mode(true).hashPrefix('!');
+  }]);
