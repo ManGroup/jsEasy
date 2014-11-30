@@ -10,15 +10,38 @@
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-hover.css" />
-  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-base.css" />
-  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-desktop.css" />
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-hover.css"/>
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-base.css"/>
+  <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-desktop.css"/>
   <link rel="stylesheet" href="./public/dist/css/style.css"/>
 
   <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
 
 </head>
 <body ng-app="jsEasy" ng-controller="MainController">
+
+<!--
+ <div class="modal" ui-if='modal1' ui-state='modal1'>
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button class="close"
+                 ui-turn-off="modal1">&times;</button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button ui-turn-off="modal1" class="btn btn-default">Close</button>
+          <button ui-turn-off="modal1" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     -->
 
 <!-- Sidebars -->
 <div ng-include="'public/dist/tpl/sidebar.html'"
@@ -34,13 +57,14 @@
     <div class="navbar-brand navbar-brand-center" yield-to="title">
       {{title}}
     </div>
-    <div class="btn-group pull-left">
+    <div class="btn-group  pull-left">
       <div ui-toggle="sidebarLeft" class="btn sidebar-toggle">
         <i class="fa fa-bars"></i>菜单
       </div>
     </div>
+    <!--ui-turn-on="modal1"-->
     <div class="btn-group pull-right" yield-to="navbarAction">
-      <a href="#/forms" class="btn btn-navbar">
+      <a href="" class="btn btn-navbar">
         <i class="fa fa-exclamation-circle fa-navbar"></i>筛选
       </a>
     </div>
@@ -72,18 +96,19 @@
   </div>
 </div>
 
+
 <script>
   (function () {
     var lang = "zh";
     reserveLoad(
-         ['./public/dist/js/angular-all.min.js', 'angular'],
-            ['./public/src/libs/dist/js/angular-touch.js'],
+      ['./public/dist/js/angular-all.min.js', 'angular'],
+      ['./public/src/libs/dist/js/angular-touch.js'],
 
-         ['./public/src/libs/dist/js/mobile-angular-ui.js'],
-         ['./public/dist/js/ie.min.js'],
-         ['./public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
+      ['./public/src/libs/dist/js/mobile-angular-ui.js'],
+      ['./public/dist/js/ie.min.js'],
+      ['./public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
 //           angular.bootstrap(document, ['jsEasy']);
-         });
+      });
   })();
 </script>
 </body>
