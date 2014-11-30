@@ -21,10 +21,10 @@ function web(app) {
 function api(app) {
     app.get('/api/defaultJson.json', demo.defaultJson);
     app.get('/api/food/get.json', demo.getFood);
-  app.get('/api/food/list.json', demo.getFoodList);
+    app.get('/api/food/list.json', demo.getFoodList);
 
-    app.get('/HealthCheck.json', function(req,res){
-        res.json({ok:"success"});
+    app.get('/HealthCheck.json', function (req, res) {
+        res.json({ok: "success"});
     });
 }
 
