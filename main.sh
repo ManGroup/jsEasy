@@ -1,3 +1,5 @@
+forever stopall
+
 cd public
 
 grunt
