@@ -24,12 +24,12 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
 
    var index = {
      templateUrl: getFileProvider.html('index.html'),
-     controller: 'indexCtrl'
+       reloadOnSearch: false
    };
 
    var login = {
      templateUrl: getFileProvider.html('login.html'),
-     controller: 'loginCtrl'
+       reloadOnSearch: false
    };
 
    var home = {
@@ -44,7 +44,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
 
    var detail = {
      templateUrl: getFileProvider.html('detail.html'),
-     controller: 'detailCtrl'
+     reloadOnSearch: false
    };
 
    $routeProvider.

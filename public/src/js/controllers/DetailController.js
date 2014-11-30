@@ -2,6 +2,5 @@ jsEasyApp.controller('detailCtrl', ["$rootScope", "$scope" ,'app','$location','d
   console.log("detailCtrl");
   detailService.getDetail("1", function (err, data) {
     $scope.file = data.data.fileId;
-  })
-
+  });
 }]);
