@@ -4,7 +4,7 @@
 
 jsEasyControllers.controller("homeCtrl", ["$rootScope", "$scope", "$routeParams", "$locale",
                                           function ($rootScope, $scope, $routeParams, $locale) {
-                                              $scope.userAgent = navigator.userAgent;
+  $scope.userAgent = navigator.userAgent;
   $scope.message = "登录成功！！！";
   $scope.title = "宅语菜园";
 
