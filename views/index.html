@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-base.css" />
     <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-desktop.css" />
     <link rel="stylesheet" href="public/src/vendor/dist/font-awesome/cssfont-awesome.min.css" />
-    <link rel="stylesheet" href="./public/dist/css/style.css"/>
 
+    <link rel="stylesheet" href="public/dist/css/style.css"/>
+    <link rel="stylesheet" href="public/dist/css/response.css"/>
     <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
 
     <style>
@@ -36,7 +37,7 @@
 
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand navbar-brand-center" yield-to="title">
-            {{title}}
+            {{title || "宅语菜园"}}
         </div>
         <div class="btn-group pull-left">
             <div ui-toggle="sidebarLeft" class="btn sidebar-toggle">
@@ -82,11 +83,10 @@
         reserveLoad(
                 ['./public/dist/js/angular-all.min.js', 'angular'],
                 ['./public/src/libs/dist/js/angular-touch.js'],
-
                 ['./public/src/libs/dist/js/mobile-angular-ui.js'],
                 ['./public/dist/js/ie.min.js'],
                 ['./public/dist/js/jsEasy.min.js', 'jsEasy'], function (errorUrl) {
-//           angular.bootstrap(document, ['jsEasy']);
+
                 });
     })();
 </script>
