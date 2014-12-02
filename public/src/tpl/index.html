@@ -1,20 +1,32 @@
-<div class="scrollable">
-  <div id="test2" class="scrollable-content" ng-controller="indexCtrl">
+<div class="scrollable" ng-controller="indexCtrl">
+
+  <div class="scrollable-content" my-scroll>
 
     <div class="list-group text-center">
-      <div class="list-group-item list-group-item-home">
-        <h3>Mobile Angular UI </h3>
-      </div>
-      <div class="list-group-item list-group-item-home media" ng-repeat='food  in foodlist'>
+            <div class="list-group-item list-group-item-home">
+                <h3>Mobile Angular UI </h3>
+            </div>
+            <div class="r-food-list-item list-group-item list-group-item-home media" ng-repeat='food  in foodlist'>
+              <div class="media-body">
+                <div>
+                        <img ng-src="{{food.foodsrc}} " width="150px" height="131px">
+                    </div>
+                    <div class="r-food-list-item-des">
+                      <span class="r-food-name">{{food.foodname}}</span>
 
-        <div class="media-body">
-          <h3 class="media-heading"><img ng-src="{{food.foodsrc}} " width="20%" height="20%">
-            {{food.foodname}}{{food.foodprice}}元|销售量:{{food.selltotal}}</h3>
+                      <span class="r-food-price">{{food.foodprice}}元</span> <br>
+                      <a href=""
+                         class="btn btn-primary" ng-click="gotoDetail()">查看详细</a>
+                    </div>
+                    <a href="/detail"></a>
+                </div>
+            </div>
+            <div class="list-group-item list-group-item-home media" style="text-align: center;background: #FFFFFF">
+
+              <button>Refresh</button>
+              </li>
+            </div>
         </div>
-      </div>
-
-
-    </div>
 
 
   </div>
