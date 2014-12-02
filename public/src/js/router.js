@@ -23,7 +23,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
     'use strict';
 
     var index = {
-      templateUrl: getFileProvider.html('indextest.html'),
+      templateUrl: getFileProvider.html('index.html'),
       reloadOnSearch: false
     };
 
