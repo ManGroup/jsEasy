@@ -23,18 +23,10 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
     'use strict';
 
     var index = {
-      templateUrl: getFileProvider.html('index.html'),
-      reloadOnSearch: false
-    };
-    var index = {
-      templateUrl: getFileProvider.html('index.html'),
+      templateUrl: getFileProvider.html('indextest.html'),
       reloadOnSearch: false
     };
 
-    var login = {
-      templateUrl: getFileProvider.html('login.html'),
-      controller: 'loginCtrl'
-    };
     var login = {
       templateUrl: getFileProvider.html('login.html'),
       reloadOnSearch: false
