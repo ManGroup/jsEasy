@@ -2,7 +2,7 @@
  * Created by Antony on 14/11/21.
  */
 
-jsEasyControllers.controller("indexCtrl", ["$rootScope", "$scope", "$locale", 'foodService', 'app', '$location', function ($rootScope, $scope, $locale, foodService, app, $location) {
+jsEasyControllers.controller('indexCtrl', ['$rootScope', '$scope', '$locale', 'foodService', '$location', function ($rootScope, $scope, $locale, foodService, $location) {
 
     $rootScope.title = "宅语菜园";
 
@@ -11,10 +11,15 @@ jsEasyControllers.controller("indexCtrl", ["$rootScope", "$scope", "$locale", 'f
     });
 
     $scope.gotoDetail = function () {
-        console.log("gotoDetail");
         $location.search({}).path('/detail');
     }
-
-
 }]);
-
+jsEasyControllers.directive('indexScroll', ['$document', function ($document) {
+  return function (scope, element, attr) {
+    //   var elementBottom = element.offset().top ;
+    element.on('scroll', function () {
+      console.log("scrollTop");
+      //        console.info(elementBottom) ;
+    });
+  };
+}]);
