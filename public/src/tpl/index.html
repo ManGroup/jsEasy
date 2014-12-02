@@ -4,7 +4,30 @@
 
     <div class="list-group text-center">
             <div class="list-group-item list-group-item-home">
-                <h3>Mobile Angular UI </h3>
+
+              <div class='section' ng-hide='sectionhide'>
+                <ui-state id='MyTabs' default='1'></ui-state>
+
+                <ul class="nav nav-tabs">
+                  <li ng-class="{'active': ui.eq('MyTabs', 1)}">
+                    <a ui-set="{'MyTabs': 1}">分类筛选</a>
+                  </li>
+                  <li ng-class="{'active': ui.eq('MyTabs', 2)}">
+                    <a ui-set="{'MyTabs': 2}">其他条件</a>
+                  </li>
+                </ul>
+
+                <div ng-if="ui.eq('MyTabs', 1)">
+                  <h3 class="page-header">分类筛选</h3>
+
+                </div>
+
+                <div ng-if="ui.eq('MyTabs', 2)">
+                  <h3 class="page-header">其他条件</h3>
+
+                </div>
+              </div>
+              <i class='{{togglePhoto}}' ng-click="hide()">筛选</i>
             </div>
             <div class="r-food-list-item list-group-item list-group-item-home media" ng-repeat='food  in foodlist'>
               <div class="media-body">
