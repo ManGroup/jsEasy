@@ -47,12 +47,24 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
       reloadOnSearch: false
     };
 
+    var feedback = {
+      templateUrl: getFileProvider.html('feedback.html'),
+      reloadOnSearch: false
+    };
+
+    var address = {
+      templateUrl: getFileProvider.html('address.html'),
+      reloadOnSearch: false
+    }
+
     $routeProvider.
       when('/index', index).
       when('/login', login).
       when('/home', index).
       when('/profile', profile).
       when('/detail', detail).
+      when('/feedback', feedback).
+      when('/address', address).
       when('/', index).
       otherwise({
         redirectTo: '/'

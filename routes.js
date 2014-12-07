@@ -19,6 +19,9 @@ function web(app) {
     app.get("\/partials\/?([^\/]+)?(.html)\/?", partial.partialRender);
 }
 function api(app) {
+
+    app.get('/api/login.json',user.signIn);
+
     app.get('/api/defaultJson.json', demo.defaultJson);
     app.get('/api/food/get.json', demo.getFood);
     app.get('/api/food/list.json', demo.getFoodList);
