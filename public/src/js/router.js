@@ -8,7 +8,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
 
   this.html = function (fileName) {
     console.log(fileName);
-    return '/public/dist/tpl/' + fileName + '?v=' + app.version;
+    return '/public/dist/tpl/' + fileName + '?v=' + 1;
   };
   this.$get = function () {
     console.log(this.html);
@@ -55,7 +55,12 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
     var address = {
       templateUrl: getFileProvider.html('address.html'),
       reloadOnSearch: false
-    }
+    };
+
+    var addressEdit = {
+        templateUrl: getFileProvider.html('address_edit.html'),
+        reloadOnSearch: false
+    };
 
     $routeProvider.
       when('/index', index).
@@ -65,6 +70,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
       when('/detail', detail).
       when('/feedback', feedback).
       when('/address', address).
+      when('/addressEdit', addressEdit).
       when('/', index).
       otherwise({
         redirectTo: '/'

@@ -15,7 +15,6 @@ module.exports = function (app) {
 function web(app) {
     app.get('/', routes.index);
     app.get('/users', user.list);
-
     app.get("\/partials\/?([^\/]+)?(.html)\/?", partial.partialRender);
 }
 function api(app) {
