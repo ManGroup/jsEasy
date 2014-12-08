@@ -1,4 +1,4 @@
-jsEasyApp.controller('feedBackCtrl', ["$rootScope", "$scope" , 'app', '$location', 'detailService', function ($rootScope, $scope, app, $location, detailService) {
+jsEasyApp.controller('feedBackCtrl', ["$rootScope", "$scope" , '$location', function ($rootScope, $scope, $location) {
     $scope.postFeedBack = function () {
         var tel = $scope.telephoneInput || "";
         var back = $scope.feedbackInput || "";
