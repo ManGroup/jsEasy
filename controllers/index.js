@@ -4,5 +4,5 @@
 var user = require("../proxy/user");
 
 exports.index = function (req, res) {
-    res.render("index", {result: result});
+    res.render("index", {});
 };
