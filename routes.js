@@ -4,7 +4,6 @@ var partial = require("./controllers/partials");
 var demo = require("./controllers/demo");
 
 module.exports = function (app) {
-
     web(app);
     api(app);
 };
