@@ -3,6 +3,7 @@ var user = require('./controllers/user');
 var partial = require("./controllers/partials");
 var demo = require("./controllers/demo");
 
+//注释
 module.exports = function (app) {
     web(app);
     api(app);
