@@ -61,7 +61,10 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
         templateUrl: getFileProvider.html('address_edit.html'),
         reloadOnSearch: false
     };
-
+    var order = {
+        templateUrl: getFileProvider.html('order.html'),
+        reloadOnSearch: false
+    };
     $routeProvider.
       when('/index', index).
       when('/login', login).
@@ -71,6 +74,7 @@ angular.module('jsEasy.router', ['ngRoute']).constant('app', {}).provider('getFi
       when('/feedback', feedback).
       when('/address', address).
       when('/addressEdit', addressEdit).
+      when('/order', order).
       when('/', index).
       otherwise({
         redirectTo: '/'
