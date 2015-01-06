@@ -1,0 +1,65 @@
+<div content-for="title">
+    <span>我的地址</span>
+</div>
+
+<div class="scrollable" ng-controller="addrCtrl">
+    <div class="scrollable-content" style="min-height: 500px;">
+        <div class="section">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="btn-group pull-right">
+                        <a ui-turn-on='myDropdown1' class='btn'>
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                        <ul class="dropdown-menu"
+                            outer-click="ui.turnOff('myDropdown1')"
+                            outer-click-if="ui.active('myDropdown1')"
+                            role="menu"
+                            ui-show="myDropdown1"
+                            ui-state="myDropdown1"
+                            ui-turn-off="myDropdown1">
+
+                            <li><a>编辑</a></li>
+                            <li><a>删除</a></li>
+                        </ul>
+                    </div>
+                    <h3 class="panel-title">地址1</h3>
+                </div>
+                <div class="panel-body">
+                    辽宁省大连市软件园路8号 大连东软信息学院三期
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="btn-group pull-right">
+                        <a ui-turn-on='myDropdown' class='btn'>
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                        <ul
+                                class="dropdown-menu"
+                                outer-click="ui.turnOff('myDropdown')"
+                                outer-click-if="ui.active('myDropdown')"
+                                role="menu"
+                                ui-show="myDropdown"
+                                ui-state="myDropdown"
+                                ui-turn-off="myDropdown">
+
+                            <li><a>编辑</a></li>
+                            <li><a>删除</a></li>
+                        </ul>
+                    </div>
+                    <h3 class="panel-title">地址2</h3>
+                </div>
+                <div class="panel-body">
+                    辽宁省大连市软件园路8号 大连东软信息学院三期
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <a href="/addressEdit" class="btn btn-primary r-col-12">添加地址</a>
+        </div>
+    </div>
+</div>

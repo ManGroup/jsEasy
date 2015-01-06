@@ -129,7 +129,8 @@ module.exports = function(grunt) {
         },
         files: {
           "src/theme/css/style.css": "src/theme/css/style.less",
-          "src/theme/css/response.css": "src/theme/css/response.less"
+          "src/theme/css/response.css": "src/theme/css/response.less",
+          "src/theme/css/order.css": "src/theme/css/order.less"
         }
       }
     },

@@ -10,7 +10,7 @@
         "ejs": "1.0.0",
         "async": "0.9.0",
         "mysql": "2.5.2",
-        " mysql-orm": "0.0.8"
+        "mysql-orm": "0.0.8"
     },
     "devDependencies": {
         "should": "~2.1.1",

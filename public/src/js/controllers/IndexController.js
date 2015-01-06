@@ -5,17 +5,17 @@
 
 jsEasyControllers.controller('indexCtrl', ['$rootScope', '$scope', '$locale', 'foodService', '$location', function ($rootScope, $scope, $locale, foodService, $location) {
 
-    $rootScope.title = "宅语菜园";
+  $rootScope.title = "宅语菜园";
   $scope.sectionhide = true;
   $scope.togglePhoto = "fa fa-sort-desc";
 //
   foodService.foodlist(function (err, result) {
-        $scope.foodlist = result.data;
-    });
+    $scope.foodlist = result.data;
+  });
 
-    $scope.gotoDetail = function () {
-        $location.search({}).path('/detail');
-    }
+  $scope.gotoDetail = function () {
+    $location.search({}).path('/detail');
+  }
 
   $scope.hide = function () {
     if ($scope.sectionhide) {
@@ -36,34 +36,26 @@ jsEasyControllers.controller('indexCtrl', ['$rootScope', '$scope', '$locale', 'f
      * 绑定scroll的执行事件
      */
     var handler = function () {
-      var eventLimit = 50;
+      var eventLimit = 20;
       var offsetHeight , scrollHeight , scrollTop;
-      var elementBottom, remaining, shouldScroll, windowBottom;
-//      windowBottom = $window.height() + $window.scrollTop();
-//      elementBottom = element.offset().top + element.height();
-//      remaining = elementBottom - windowBottom;
-//      shouldScroll = remaining <= $window.height() * scrollDistance;
       offsetHeight = element[0].offsetHeight;
       scrollHeight = element[0].scrollHeight;
       scrollTop = element[0].scrollTop;
-      console.info("**********************");
-      console.info("offsetHeight" + offsetHeight);
-      console.info("scrollHeight" + scrollHeight);
-      console.info("scrollTop" + scrollTop);
+
       if (eventLimit > scrollHeight - scrollTop - offsetHeight) {
         foodService.foodlist(function (err, result) {
-          console.info(result.data);
-          scope.foodlist.push(result.data);
+          var items = result.data;
+
+          for (var i = 0; i < items.length; i++) {
+            scope.foodlist.push(items[i]);
+
+          }
+
+
         });
 
       }
-
-//      console.info("windowBottom"+windowBottom);
-//      console.info("elementBottom" + elementBottom);
-//      console.info("remaining" + remaining);
-//      console.info("shouldScroll" + shouldScroll);
     };
-
     element.on('scroll', handler);
   };
 }]);

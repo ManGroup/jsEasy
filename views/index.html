@@ -7,17 +7,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
-
+    <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
     <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-hover.css" />
     <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-base.css" />
     <link rel="stylesheet" href="public/src/libs/dist/css/mobile-angular-ui-desktop.css" />
-    <link rel="stylesheet" href="public/src/vendor/dist/font-awesome/cssfont-awesome.min.css" />
 
     <link rel="stylesheet" href="public/dist/css/style.css"/>
     <link rel="stylesheet" href="public/dist/css/response.css"/>
-    <script type="text/javascript" src="../public/dist/js/reserveLoad.min.js"></script>
+    <script type="text/javascript" src="public/dist/js/reserveLoad.min.js"></script>
 
     <style>
 
@@ -37,18 +36,16 @@
 
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand navbar-brand-center" yield-to="title">
-            {{title || "宅语菜园"}}
+            宅语菜园
         </div>
         <div class="btn-group pull-left">
             <div ui-toggle="sidebarLeft" class="btn sidebar-toggle">
                 <i class="fa fa-bars"></i>菜单
             </div>
         </div>
-        <div class="btn-group pull-right" yield-to="navbarAction">
-            <a href="#/forms" class="btn btn-navbar">
-                <i class="fa fa-exclamation-circle fa-navbar"></i>筛选
-            </a>
+        <div class="navbar-brand pull-right" yield-to="right">
         </div>
+
     </div>
 
     <div class="navbar navbar-app navbar-absolute-bottom">
@@ -56,7 +53,7 @@
             <a href="/" class="btn btn-navbar">
                 <i class="fa fa-home fa-navbar"></i>菜品
             </a>
-            <a href="/" class="btn btn-navbar">
+            <a href="/order" class="btn btn-navbar">
                 <i class="fa fa-home fa-navbar"></i>订单
             </a>
 
